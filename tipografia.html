@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <title>Projeto MyComponents</title>
@@ -25,7 +25,102 @@
     </header>
     <main class="main">
       <h1>My Component</h1>
-      <article></article>
+      <article class="destaque">
+        <h2>Tipografia</h2>
+        <p>
+          A tipografia transmite nossas definiçõesde tamanhos e espaçamentos e
+          deve ser utilizada respeitandoa hierarquiados elementos na interface
+        </p>
+      </article>
+
+      <section>
+        <h3>Elementos</h3>
+        <article>
+          <h4>Textos</h4>
+          <p>
+            O texto está em <b>negrito</b> e esse resto de frase
+            <strong>possui um negrito mais forte</strong>
+          </p>
+          <p>Esse texto em <i>italico</i> e está <em>com énfase</em>.</p>
+          <p>
+            Isso é um texto escrito de forma <u class="underline">errada</u> e
+            isso e um <a href="#">link</a>.
+          </p>
+        </article>
+
+        <article>
+          <h4>Sobrescrito e Subscrito</h4>
+          <p>3<sup>2</sup> é igual a 9</p>
+          <p>A fórmula da água é H<sub>2</sub>O.</p>
+        </article>
+
+        <article>
+          <h4>Abreviações</h4>
+          <p>
+            Para criar páginas na web precisamos usar o
+            <a href="#html-dfn"
+              ><abbr title="Hypertext Markup Language">HTML</abbr></a
+            >.
+          </p>
+          <p>
+            O
+            <dfn id="html-dfn"
+              ><abbr title="Hypertext Markup Language">HTML</abbr></dfn
+            >
+            é a principal linguagem da web na onde podemos incluir nosso
+            conteúdo de forma semântica.
+          </p>
+        </article>
+
+        <article>
+          <h4>Citaçãoes</h4>
+          <blockquote>
+            <p>
+              O ruim não é ter trabalho. O ruim é ter que trabalhar.<cite>
+                Seu madruga</cite
+              >
+            </p>
+          </blockquote>
+
+          <blockquote
+            cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+          >
+            O elemento HTML blockquote (ou elemento HTML de citação de block)
+            indica que uma citação foi incluida. <cite>MDN</cite>
+          </blockquote>
+          <p>
+            Segundo o Seu Madruga.
+            <q>A vingança nunca é plena mata a alma e envenena.</q>
+          </p>
+
+          <p>
+            De acordo com a wikipedia
+            <q cite="https://pt.wikipedia.org/wiki/Mozilla_Firefox">
+              Firefox foi lançado em 2004.</q
+            >
+          </p>
+          <p>O filme <cite>Escola do rock</cite> foi lançado em bla bla bla.</p>
+        </article>
+
+        <article>
+          <h4>Coisas de computador</h4>
+          <p>
+            A propriedade <code>background</code> do CSS.
+            <samp>Vai colocar uma cor de fundo.</samp>
+            <!-- usei o code pra falar q o backghround e um code e o samp pra falar oq vai acontecer com esse code background -->
+          </p>
+          <pre>
+            <code>
+article {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+            </code>
+          </pre>
+
+          <p>Pressione as teclas <kbd>CRTL</kbd> + <kbd>C</kbd> para copiar</p>
+        </article>
+      </section>
     </main>
   </body>
 </html>
