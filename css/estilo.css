@@ -2,6 +2,8 @@
   --primary-color: #ff7833;
   --secondary-color: #31333b;
   --secondary-color-light: #444856;
+  --secondary-color-dark: #28292c;
+  --default-gap: 3rem;
 }
 html {
   font-size: 62.5%;
@@ -119,9 +121,12 @@ a {
 }
 .row {
   display: flex;
-  gap: 2em;
+  gap: var(--default-gap);
   padding-top: 1.5rem;
   justify-content: space-between;
+}
+.row .row {
+  padding-top: 0;
 }
 .row > * {
   /* estou falando q minha classe row quando usar >* estou falando q qm for filho da classe row terá esses atributos: flex grow 1 pra ocupar espaço, o shrink de 0 pra n diminuir e o flex basis de 0% issso fará com q as colunas sempre fiquem do msm tamanho independente do conteúdo. */
@@ -137,4 +142,43 @@ a {
 }
 .emoji {
   list-style-type: "\1F642";
+}
+input,
+label,
+textarea,
+select {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+input,
+textarea,
+select {
+  padding: 1.2rem;
+  background-color: #ccc;
+  margin-bottom: 1.6rem;
+  border-radius: 5px;
+  border: none;
+}
+.btn {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color-light);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--secondary-color-dark);
+}
+.form {
+  /* eu usei o calc pra calcular a metade do width de 100% coloquei pra ser metade e como eu coloquei um valor anterior, se eu mudasse la em cima o valor aq em baixo n iria mudar, logo eu criei uma variável falando um determinado falor e dps dividi por 2, se eu precisar mudar o valor la de cima aq vai mudar tmb mas sempre pra metade dele como eu estou querendo, visto q eu pedi pra ele ser dividido por 2(esse valor no caso e o gap de 3rem la do row). */
+  width: calc(50% - var(--default-gap) / 2);
+}
+.btn2 {
+  background-color: transparent;
+  outline: 2px solid var(--secondary-color-dark);
 }

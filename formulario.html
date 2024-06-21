@@ -29,12 +29,12 @@
       <section>
         <h2>Entre em contato</h2>
         <div class="row">
-          <form action="" method="post">
+          <form method="post">
             <div class="row">
               <div>
                 <label for="nome">Nome</label>
                 <input
-                  type="text"
+                  type="user"
                   name="nome"
                   id="nome"
                   placeholder="Digite seu nome"
@@ -64,6 +64,42 @@
             <p><b>Email</b>: mcig@gmail.com</p>
           </address>
         </div>
+      </section>
+      <section>
+        <h2>Quiz</h2>
+        <form action="" class="form">
+          <label for="tecnologia">Qual é sua linguagem favorita?</label>
+          <select name="tecnologia" id="tecnologia">
+            <option value="null">Selecione</option>
+            <option value="Javascript">Javascript</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+          </select>
+          <label
+            >Baixa prioridade
+            <input type="radio" name="prioridade" value="baixa"
+          /></label>
+          <label
+            >Média prioridade
+            <input type="radio" name="prioridade" value="média"
+          /></label>
+          <label
+            >Alta prioridade <input type="radio" name="prioridade" value="alta"
+          /></label>
+
+          <label
+            ><input type="checkbox" name="copy" value="true" /> Envie-me uma
+            cópia</label
+          >
+          <label
+            ><input type="checkbox" name="humano" value="true" /> Sou
+            humano</label
+          >
+          <div class="row">
+            <input type="reset" value="Resetar" />
+            <input type="submit" value="Enviar" class="btn btn2" />
+          </div>
+        </form>
       </section>
     </main>
   </body>
