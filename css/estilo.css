@@ -127,3 +127,14 @@ a {
   /* estou falando q minha classe row quando usar >* estou falando q qm for filho da classe row terá esses atributos: flex grow 1 pra ocupar espaço, o shrink de 0 pra n diminuir e o flex basis de 0% issso fará com q as colunas sempre fiquem do msm tamanho independente do conteúdo. */
   flex: 1 0 0%;
 }
+.alternate {
+  list-style-type: none;
+  padding-left: 0;
+}
+.alternate li:not(:last-child) {
+  border-bottom: 2px solid;
+  padding: 0;
+}
+.emoji {
+  list-style-type: "\1F642";
+}
