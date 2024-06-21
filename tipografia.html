@@ -120,6 +120,34 @@ article {
 
           <p>Pressione as teclas <kbd>CRTL</kbd> + <kbd>C</kbd> para copiar</p>
         </article>
+
+        <article>
+          <h4>Datas e horas</h4>
+          <p>
+            <!-- quando for data colocar entre o time e no time com atributo datetime com data em ingles, se tiver horas colocar um T e dps as hor,min e seg, e tmb pode colocar o fuso horario. -->
+            O evento ocorrerá em
+            <time datetime="2025-11-10"> 10 de Novembro de 2025</time>.
+          </p>
+          <p>
+            O evento ocorrerá as
+            <time datetime="2025-11-15T20:00:00">
+              20h00 do dia 15 de Novembro de 2025</time
+            >.
+          </p>
+          <p>
+            O evento ocorrerá as
+            <time datetime="2026-10-12T20:00:00-03:00">
+              20h00 do dia 12 de Outubro de 2026</time
+            >.
+          </p>
+          <p>
+            <!-- deletei a data com a tag del logo ela ficara riscada, dps usei a tag ins pra inserir uma nova e coloquei a data dentro do ins e dentro do ins o time e dentro do time o atributo datetime -->
+            O evento ocorrerá as 20h00 do dia <del>10 de Novembro de 2025</del>
+            <ins>
+              <time datetime="2025-11-11"> 11 de Novembro de 2025</time>.</ins
+            >
+          </p>
+        </article>
       </section>
     </main>
   </body>
