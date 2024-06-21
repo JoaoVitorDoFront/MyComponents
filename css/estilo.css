@@ -20,10 +20,12 @@ body {
 .main-header {
   width: 260px;
   background-color: var(--secondary-color);
+  /* no meu header total eu falei q n tenho flex grow e nem shrink mas um flex basis de 260px, logo ele ficara com a largura igual pra tudo no header */
   flex: 0 0 26rem;
 }
 .main {
   background-color: #444856;
+  /* no meu main na onde tem meu conteúdo eu falei q eu qro um flex grow pq ele faltava completar um espaço ai eu pedi pra ele ocupar todo espaço com o flex grow 1 */
   flex: 1 0;
   padding: 6.5rem 6rem 7.5rem;
 }
@@ -48,11 +50,15 @@ h2 {
 article {
   padding: 1em 0;
 }
+section {
+  margin-bottom: 3rem;
+}
 .destaque {
   border-left: 1px solid var(--primary-color);
   font-size: 1.1em;
-  padding-left: 2em;
+  /* padding-left: 2em; */
   margin-bottom: 2.2em;
+  padding: 0 0 0 2em;
 }
 a {
   color: inherit;
@@ -94,4 +100,25 @@ a {
 }
 .underline {
   text-decoration: red wavy underline;
+}
+.card {
+  max-width: 740px;
+  background-color: var(--secondary-color);
+  padding: 0;
+}
+.card img {
+  /* estou falando q minha img tera um max width do seu tamanho completo, nao causando barra de rolagem em alguns casos */
+  max-width: 100%;
+}
+.card_content {
+  padding: 1em;
+}
+.card_content p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.row {
+  display: flex;
+  gap: 2em;
+  padding-top: 1.5rem;
 }
