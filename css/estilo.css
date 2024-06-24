@@ -17,16 +17,21 @@ body {
   line-height: 1.7;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: url(../imagens/bg-unsplash-2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .main-header {
   width: 260px;
-  background-color: var(--secondary-color);
+  background-color: rgb(49, 51, 59, 0.8);
   /* no meu header total eu falei q n tenho flex grow e nem shrink mas um flex basis de 260px, logo ele ficara com a largura igual pra tudo no header */
   flex: 0 0 26rem;
 }
 .main {
   background-color: #444856;
+  background-color: rgba(68, 72, 86, 0.6);
   /* no meu main na onde tem meu conteúdo eu falei q eu qro um flex grow pq ele faltava completar um espaço ai eu pedi pra ele ocupar todo espaço com o flex grow 1 */
   flex: 1 0;
   padding: 6.5rem 6rem 7.5rem;
@@ -88,6 +93,9 @@ a {
 .bullet {
   display: block;
   text-align: right;
+  position: sticky;
+  left: 0;
+  top: 0;
 }
 .bullet li:hover {
   padding-right: 0.5rem;
@@ -199,4 +207,41 @@ select {
 }
 .btn-big {
   font-size: 1.6rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* sempre colocar width de 100% */
+}
+.table td,
+.table th {
+  padding: 1.6rem;
+  /* aq eu peguei a minha classe table e peguei o th e o td e falei q tem paddding */
+}
+tbody {
+  font-size: 1.5rem;
+  /* mudei o tamanho da fonte do tbody e n do thead */
+}
+table th {
+  text-transform: uppercase;
+  text-align: left;
+  /* falei q na table vai ser maiusculo e vai pra esquerda */
+}
+.table-verticalLines td:not(:last-child),
+.table-verticalLines th:not(:last-child) {
+  border-right: 1px solid black;
+  /* peguei minha ultima section e falei e editei pela classe e eu falei q vai ter essa edição menos o ultimo filho, tanto da td qnd da th */
+}
+table th:last-child,
+table td:last-child {
+  text-align: right;
+  /* falei q na minha td e na th vai pra direita */
+}
+.table-alternate tbody tr:nth-child(odd) {
+  background-color: var(--secondary-color-dark);
+  /* aq eu peguei a classe e peguei o tr(pra editar na horizontal) do tbody e falei q qnd for impar vai ter essa edição ai */
+}
+.table:not(.table-alternate) td {
+  border-bottom: 1px solid var(--secondary-color-dark);
+  /* eu selecionei a classe table, exceto a q n tem a classe table-alternate, a unica q n tem é a primeira, logo vai editar a primeira, e eu peguei a td pq só da certo se editar na td */
 }
