@@ -166,10 +166,25 @@ select {
 }
 .btn {
   background-color: var(--secondary-color);
-  border: 2px solid var(--secondary-color-light);
+  border: 1px solid var(--secondary-color-dark);
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
+  padding: 1.2rem;
+  border-radius: 5px;
+  padding: 0.8em 1.2em;
+}
+.btn + .btn {
+  margin-left: 2rem;
+}
+.btn-full + .btn-full {
+  margin-left: 0;
+  margin-top: 2rem;
+}
+.btn-full {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
 }
 .btn:hover {
   background-color: var(--secondary-color-dark);
@@ -181,4 +196,7 @@ select {
 .btn2 {
   background-color: transparent;
   outline: 2px solid var(--secondary-color-dark);
+}
+.btn-big {
+  font-size: 1.6rem;
 }
